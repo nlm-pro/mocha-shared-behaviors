@@ -1,2 +1,1 @@
-# mocha-shared-behaviors
-demonstration shared behaviors with Mocha
+# Shared Behaviors with Mocha
