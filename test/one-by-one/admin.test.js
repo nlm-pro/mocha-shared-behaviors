@@ -1,14 +1,15 @@
-import { User } from '../../src/user.js';
+import { Admin } from '../../src/user.js';
 import { expectUserLike } from './helpers.js';
+import { expect } from '@bundled-es-modules/chai';
 
 context('Solution: one by one', () => {
   let user = 'foo';
   const firstname = 'tobi';
   const lastname = 'holowaychuk';
 
-  describe('User', () => {
+  describe('Admin', () => {
     beforeEach(() => {
-      user = new User(firstname, lastname);
+      user = new Admin(firstname, lastname);
     });
 
     it('should have .name.first', () => {
@@ -25,5 +26,8 @@ context('Solution: one by one', () => {
       });
     });
 
+    it('should be an .admin', () => {
+      expect(user.admin).to.be.true;
+    });
   });
 });
