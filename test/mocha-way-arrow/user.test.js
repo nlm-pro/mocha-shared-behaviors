@@ -1,7 +1,7 @@
 import { User } from '../../src/user.js';
 import { shouldBehaveLikeAUser } from './helpers.js';
 
-describe('shared behaviors - the Mocha way but w/ lambdas', () => {
+context('Solution: context w/ lambdas fails', () => {
   describe('User', () => {
     let user;
 
