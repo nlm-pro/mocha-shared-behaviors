@@ -6,27 +6,26 @@ import { expect } from '@bundled-es-modules/chai';
  * @param {*} user - the "User Like" object to test
  * @return {function()} expectation
  */
-export const expectUserLike = (user) => ({
+export const expectUserLike = user => ({
   /**
    * test the "user like" object has .name.first property
    * @param {String} expectation - value expected for the name.first field
    */
-  toHaveNameFirstAs: (expectation) => {
+  toHaveNameFirstAs: expectation => {
     expect(user.name.first).to.equal(expectation);
   },
   /**
    * test the "user like" object has .name.last property
    * @param {String} expectation - value expected for the name.last field
    */
-  toHaveNameLastAs: (expectation) => {
+  toHaveNameLastAs: expectation => {
     expect(user.name.last).to.equal(expectation);
   },
   /**
    * test the "user like" object has a fullname method witch returns the user fullname
-   * @param {String} firstName - "user" first name
-   * @param {String} lastName - "user" last name
+   * @param {String} expectation - value the fullname method should return
    */
-  toHaveFullnameThatReturnAs: (firstName, lastName) => {
-    expect(user.fullname()).to.equal(`${firstName} ${lastName}`);
+  toHaveFullnameThatReturnAs: expectation => {
+    expect(user.fullname()).to.equal(expectation);
   }
 });

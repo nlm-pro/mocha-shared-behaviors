@@ -22,7 +22,7 @@ context('Solution: one by one', () => {
 
     describe('.fullname()', () => {
       it('should return the full name', () => {
-        expectUserLike(user).toHaveFullnameThatReturnAs(firstname, lastname);
+        expectUserLike(user).toHaveFullnameThatReturnAs(`${firstname} ${lastname}`);
       });
     });
 
